@@ -12,5 +12,7 @@ else:
     for p in (CERT_FILE, KEY_FILE):
         if not p.exists():
             raise FileNotFoundError(f"证书文件不存在: {p}")
+        else:
+            print(f"证书存在")
     run(app, host="0.0.0.0", port=443,
         ssl_certfile=str(CERT_FILE), ssl_keyfile=str(KEY_FILE))
