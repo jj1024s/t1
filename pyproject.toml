@@ -1,0 +1,20 @@
+[project]
+name = "t1"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "season", email = "season1024@outlook.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.142.2",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+t1 = "t1:main"
+
+[build-system]
+requires = ["uv_build>=0.12.6,<0.13.0"]
+build-backend = "uv_build"
